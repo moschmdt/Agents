@@ -62,7 +62,7 @@
       },
       {
         "id": "0babdf68fba348739390fb722d752c6f",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -176,6 +176,10 @@
           {
             "name": "name",
             "toId": "966c0e6856c245bebe681656a5ff81e0"
+          },
+          {
+            "name": "side",
+            "toId": "884cca9626d8d6b74cf1394ce601445a"
           }
         ],
         "type": "SOAR_ID"
@@ -228,15 +232,6 @@
           "process-open-bracket"
         ],
         "id": "206cb89c9394445a91d640f08768552e",
-        "type": "ENUMERATION"
-      },
-      {
-        "choices": [
-          "x",
-          "y",
-          "z"
-        ],
-        "id": "21859cf9a6a646a5af8f2d19ca1747cf",
         "type": "ENUMERATION"
       },
       {
@@ -511,13 +506,6 @@
         "type": "ENUMERATION"
       },
       {
-        "choices": [
-          "nil"
-        ],
-        "id": "4955e96dd25f4640be4b5d46f0767ad8",
-        "type": "ENUMERATION"
-      },
-      {
         "id": "495c321e59b4462490878b00118a0f87",
         "outEdges": [
           {
@@ -536,7 +524,9 @@
       },
       {
         "choices": [
-          "add-variable"
+          "add-variable-simple",
+          "add-variable-nx-x",
+          "add-variable-x-nx"
         ],
         "id": "4bcfb7134a3b453fb4c466752ed572e1",
         "type": "ENUMERATION"
@@ -557,7 +547,9 @@
       },
       {
         "choices": [
-          "subtract-variable"
+          "subtract-variable-simple",
+          "subtract-variable-nx-x",
+          "subtract-variable-x-nx"
         ],
         "id": "51d1eec0bcf842a9ba7a010df5073445",
         "type": "ENUMERATION"
@@ -720,10 +712,6 @@
           },
           {
             "name": "value",
-            "toId": "4955e96dd25f4640be4b5d46f0767ad8"
-          },
-          {
-            "name": "value",
             "toId": "a5c6835047844638b5f5d0edcd398c6d"
           }
         ],
@@ -735,6 +723,10 @@
           {
             "name": "name",
             "toId": "f10e981a41164534895492276c3ab1c4"
+          },
+          {
+            "name": "clause",
+            "toId": "b8f65d29941745708190d8b07086020e"
           }
         ],
         "type": "SOAR_ID"
@@ -1382,6 +1374,10 @@
           {
             "name": "name",
             "toId": "da224a3d28e24ff6862b6636c57c765d"
+          },
+          {
+            "name": "side",
+            "toId": "c00114dc20395503e65abafbcc10f394"
           }
         ],
         "type": "SOAR_ID"
@@ -1432,10 +1428,6 @@
           {
             "name": "type",
             "toId": "81885bea15974701bfd05754f99fc49c"
-          },
-          {
-            "name": "value",
-            "toId": "21859cf9a6a646a5af8f2d19ca1747cf"
           },
           {
             "name": "value",
@@ -1735,6 +1727,10 @@
           {
             "name": "text",
             "toId": "05a25444408c4a85807d21121236e45f"
+          },
+          {
+            "name": "operation",
+            "toId": "05a25444408c4a85807d21121236e45f"
           }
         ],
         "type": "SOAR_ID"
@@ -1759,6 +1755,10 @@
           {
             "name": "name",
             "toId": "e90845472272434e9272a1dbe80e138e"
+          },
+          {
+            "name": "side",
+            "toId": "c591789e2e583fa9da4e27e5e59512c8"
           }
         ],
         "type": "SOAR_ID"
@@ -1953,6 +1953,30 @@
         ],
         "id": "ff72c86d227641b5b8b2fce6604ad8ec",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "c591789e2e583fa9da4e27e5e59512c8",
+        "type": "ENUMERATION",
+        "choices": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "id": "884cca9626d8d6b74cf1394ce601445a",
+        "type": "ENUMERATION",
+        "choices": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "id": "c00114dc20395503e65abafbcc10f394",
+        "type": "ENUMERATION",
+        "choices": [
+          "left",
+          "right"
+        ]
       }
     ]
   },

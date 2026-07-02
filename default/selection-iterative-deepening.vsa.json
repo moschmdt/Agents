@@ -18,14 +18,17 @@
           "partial-failure",
           "partial-success",
           "required-success",
-          "success"
+          "success",
+          "lose",
+          "indifferent",
+          "prohibit-failure"
         ],
         "id": "0cf8210cd1c84e32a049c2cd5ed5d839",
         "type": "ENUMERATION"
       },
       {
         "id": "0d795b4fba9e467c8e745a7488e0ac82",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -90,6 +93,10 @@
           {
             "name": "name",
             "toId": "a1f2d9b2e94441ff9be7b77aca0a7dc7"
+          },
+          {
+            "name": "current-evaluation-depth",
+            "toId": "af8acbf8d62ce10d1f5b51623e8ff064"
           }
         ],
         "type": "SOAR_ID"
@@ -113,7 +120,9 @@
       },
       {
         "choices": [
-          "task-operator"
+          "task-operator",
+          "progress-state",
+          "update-state"
         ],
         "id": "488c56f887ef4c8f945b82eb0cded083",
         "type": "ENUMERATION"
@@ -125,7 +134,7 @@
       },
       {
         "id": "4ce835f83bf04061a211494778801a99",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -199,7 +208,7 @@
       },
       {
         "id": "674e534ceedb4896811587170ed7d11f",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -244,6 +253,46 @@
           {
             "name": "type",
             "toId": "1190796dc7fe4755b84aa93c1af5501d"
+          },
+          {
+            "name": "required-success",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "success",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "partial-success",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "indifferent",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "failure",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "prohibit-failure",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "depth-exceeded",
+            "toId": "4ce835f83bf04061a211494778801a99"
+          },
+          {
+            "name": "look-ahead-operator",
+            "toId": "275e362e3bb03ab0a9d4480ed7f5b23d"
+          },
+          {
+            "name": "tried-tied-operator",
+            "toId": "275e362e3bb03ab0a9d4480ed7f5b23d"
+          },
+          {
+            "name": "elaborations",
+            "toId": "03be8806b020edf637162d6e9b5a2047"
           }
         ],
         "type": "SOAR_ID"
@@ -328,6 +377,10 @@
           {
             "name": "name",
             "toId": "6dba090e5eb44c4cb4677858982d55ed"
+          },
+          {
+            "name": "value",
+            "toId": "148aeb7e4cee1feafbfd68c826b9b442"
           }
         ],
         "type": "SOAR_ID"
@@ -358,7 +411,7 @@
       },
       {
         "id": "9898e747fbbb48758715c8e3ff9f7056",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -490,7 +543,7 @@
       },
       {
         "id": "a643e5d86a134052a9b49df0bf662553",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -515,7 +568,7 @@
       },
       {
         "id": "aa42b4c5e32a468b80f12866ae9c089a",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -587,6 +640,10 @@
           {
             "name": "type",
             "toId": "c83e4687fd81494499b82953b5e471d2"
+          },
+          {
+            "name": "elaborations",
+            "toId": "3c8966453cedd9164f334fedca0fbfda"
           }
         ],
         "type": "SOAR_ID"
@@ -600,7 +657,7 @@
       },
       {
         "id": "cca01b930fd449afa75122ae8338fd05",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -680,6 +737,48 @@
           }
         ],
         "type": "SOAR_ID"
+      },
+      {
+        "id": "275e362e3bb03ab0a9d4480ed7f5b23d",
+        "type": "SOAR_ID",
+        "outEdges": []
+      },
+      {
+        "id": "03be8806b020edf637162d6e9b5a2047",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "two-steps-toward",
+            "toId": "fd375d1c3469b444814a84bfb0b5f897"
+          }
+        ]
+      },
+      {
+        "id": "fd375d1c3469b444814a84bfb0b5f897",
+        "type": "SOAR_ID",
+        "outEdges": []
+      },
+      {
+        "id": "148aeb7e4cee1feafbfd68c826b9b442",
+        "type": "INTEGER"
+      },
+      {
+        "id": "3c8966453cedd9164f334fedca0fbfda",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "minimum-explorer-exit-distance",
+            "toId": "d6b6893ea65145274f0d3fcfd2cf3293"
+          }
+        ]
+      },
+      {
+        "id": "d6b6893ea65145274f0d3fcfd2cf3293",
+        "type": "INTEGER"
+      },
+      {
+        "id": "af8acbf8d62ce10d1f5b51623e8ff064",
+        "type": "INTEGER"
       }
     ]
   },

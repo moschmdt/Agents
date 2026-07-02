@@ -18,6 +18,10 @@
           {
             "name": "name",
             "toId": "fa1b589cd0a04014bdcd83a67d8b0512"
+          },
+          {
+            "name": "dir",
+            "toId": "ac85bed5ec0fae56f929f2cdadf0d5f8"
           }
         ],
         "type": "SOAR_ID"
@@ -38,7 +42,7 @@
       },
       {
         "id": "2af9186d81ab41b490ddd7b971beb895",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -141,13 +145,27 @@
           {
             "name": "type",
             "toId": "5e1646ee9b724c42984f10297ab6fad0"
+          },
+          {
+            "name": "direction",
+            "toId": "e43d98375c576e6c8874da51f10e576d",
+            "comment": "Available movement directions with associated rewards"
+          },
+          {
+            "name": "location",
+            "toId": "342344deb80839b79aa73c931a83c222"
+          },
+          {
+            "name": "reward-link",
+            "toId": "be0e1faa16bba046319cb5c094a7526c",
+            "comment": "Kernel-provided Soar-RL reward link"
           }
         ],
         "type": "SOAR_ID"
       },
       {
         "id": "f9c8f6d7fe934538a691c236f51d11eb",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -156,6 +174,73 @@
         ],
         "id": "fa1b589cd0a04014bdcd83a67d8b0512",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "e43d98375c576e6c8874da51f10e576d",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "name",
+            "toId": "e702dae9ac7b1c5acc653f76d9c9f268"
+          },
+          {
+            "name": "reward",
+            "toId": "069fe26898806d8c8f2846af648cd899"
+          }
+        ]
+      },
+      {
+        "id": "342344deb80839b79aa73c931a83c222",
+        "type": "ENUMERATION",
+        "choices": [
+          "start",
+          "left",
+          "right"
+        ]
+      },
+      {
+        "id": "be0e1faa16bba046319cb5c094a7526c",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "reward",
+            "toId": "628a1bc3a9adc1e315cdcc849ad596ce"
+          }
+        ]
+      },
+      {
+        "id": "ac85bed5ec0fae56f929f2cdadf0d5f8",
+        "type": "ENUMERATION",
+        "choices": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "id": "e702dae9ac7b1c5acc653f76d9c9f268",
+        "type": "ENUMERATION",
+        "choices": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "id": "069fe26898806d8c8f2846af648cd899",
+        "type": "INTEGER"
+      },
+      {
+        "id": "628a1bc3a9adc1e315cdcc849ad596ce",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "value",
+            "toId": "fffa03300581a3ec34e37bb3538c3cd7"
+          }
+        ]
+      },
+      {
+        "id": "fffa03300581a3ec34e37bb3538c3cd7",
+        "type": "INTEGER"
       }
     ]
   },

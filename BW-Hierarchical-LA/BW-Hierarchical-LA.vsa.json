@@ -96,6 +96,14 @@
           {
             "name": "type",
             "toId": "dadc9f74cae44e218d90501d0779f413"
+          },
+          {
+            "name": "flag",
+            "toId": "6c4d964c910f0e3d7e73f6677c460a41"
+          },
+          {
+            "name": "ss-top-state",
+            "toId": "0746ab3fdf5b4a4d957e79b8c0f13d20"
           }
         ],
         "type": "SOAR_ID"
@@ -514,6 +522,10 @@
           {
             "name": "name",
             "toId": "bfc64e511a094b5f9fb1d2df4d637e92"
+          },
+          {
+            "name": "moving-block",
+            "toId": "ab16c18e8f2643caaac540bf25c8f056"
           }
         ],
         "type": "SOAR_ID"
@@ -712,7 +724,8 @@
         "choices": [
           "move-block",
           "pick-up",
-          "put-down"
+          "put-down",
+          "evaluate-operator"
         ],
         "id": "774f4f5c6eb14308bdf06741b586fc6e",
         "type": "ENUMERATION"
@@ -1039,6 +1052,13 @@
         ],
         "id": "fe0632deb3684e9791502a26fe6f4616",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "6c4d964c910f0e3d7e73f6677c460a41",
+        "type": "ENUMERATION",
+        "choices": [
+          "move-block-lookahead"
+        ]
       }
     ]
   },

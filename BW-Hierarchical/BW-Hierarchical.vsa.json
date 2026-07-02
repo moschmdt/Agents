@@ -632,6 +632,10 @@
           {
             "name": "name",
             "toId": "02b3b02088f646d8a2fb92627ccca2c5"
+          },
+          {
+            "name": "moving-block",
+            "toId": "247b90a391654f608f3a69c8ee2fa9c8"
           }
         ],
         "type": "SOAR_ID"

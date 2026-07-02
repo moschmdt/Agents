@@ -179,7 +179,7 @@
       },
       {
         "id": "156a5ea7875045299f72eecb888549b4",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -535,7 +535,7 @@
       },
       {
         "id": "3560345c2a9b48f9a63097abb9a97f1f",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -787,7 +787,7 @@
       },
       {
         "id": "3fb5bc5209cf4bc094adee41e0f0c524",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -1709,6 +1709,10 @@
           {
             "name": "name",
             "toId": "98d0104ca08c4fedad95f73272607844"
+          },
+          {
+            "name": "digit2",
+            "toId": "093a85a0654f4ed38d454f118ac1f1d9"
           }
         ],
         "type": "SOAR_ID"
@@ -1725,7 +1729,7 @@
       },
       {
         "id": "c386e65437ec4cec91f797815bd850de",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {

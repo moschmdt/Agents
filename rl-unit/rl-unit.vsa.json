@@ -11,7 +11,7 @@
       },
       {
         "id": "07c26598f6184662baf3b32253bdaad9",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -75,6 +75,10 @@
           {
             "name": "type",
             "toId": "f378364d741e47988da30004f99a6446"
+          },
+          {
+            "name": "phase",
+            "toId": "18c542ce5ce664acdb76ee31b9143b29"
           }
         ],
         "type": "SOAR_ID"
@@ -150,6 +154,10 @@
           {
             "name": "type",
             "toId": "bbf6bb94094247539f61eb06b45bee35"
+          },
+          {
+            "name": "phase",
+            "toId": "3917335f396a01d2960a776b84d2488a"
           }
         ],
         "type": "SOAR_ID"
@@ -180,6 +188,10 @@
           {
             "name": "name",
             "toId": "af4dc8f219784d258e8ebd4bf72cc897"
+          },
+          {
+            "name": "rl",
+            "toId": "5abf1e25f15327070f50be5542fa6808"
           }
         ],
         "type": "SOAR_ID"
@@ -190,6 +202,10 @@
           {
             "name": "name",
             "toId": "c76b7e92862c488faad63351458747aa"
+          },
+          {
+            "name": "rl",
+            "toId": "f28d00ea129985cbd78e4e2a13e101d0"
           }
         ],
         "type": "SOAR_ID"
@@ -217,7 +233,7 @@
       },
       {
         "id": "5b8df9d2a7aa4ac8a40126ecf97fabca",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -240,6 +256,10 @@
           {
             "name": "name",
             "toId": "c5ad12bbca3b4afa944a991e933bbc1a"
+          },
+          {
+            "name": "rl",
+            "toId": "100d775b51ee5108011d11584d8e4fc1"
           }
         ],
         "type": "SOAR_ID"
@@ -250,6 +270,10 @@
           {
             "name": "name",
             "toId": "f39dc76a6f364e29bccbf6c8af8bd0e0"
+          },
+          {
+            "name": "rl",
+            "toId": "53c7c001792cd89693fdc2b0c1c39a2a"
           }
         ],
         "type": "SOAR_ID"
@@ -367,6 +391,10 @@
           {
             "name": "type",
             "toId": "3531f31bd5b947848266f9c82472d719"
+          },
+          {
+            "name": "phase",
+            "toId": "1f27d791564e6883b7d1336d7a55c7a8"
           }
         ],
         "type": "SOAR_ID"
@@ -387,6 +415,10 @@
           {
             "name": "name",
             "toId": "e392ea3fc9b8485cbde428ec3c6b8b6e"
+          },
+          {
+            "name": "rl",
+            "toId": "62aa5295d270ef54ef7c76e0b1c8a180"
           }
         ],
         "type": "SOAR_ID"
@@ -404,6 +436,10 @@
           {
             "name": "name",
             "toId": "55ca65be77bf450d866b9bc1f44b3ffb"
+          },
+          {
+            "name": "rl",
+            "toId": "df034253819dccf6a71cf7272aa444fc"
           }
         ],
         "type": "SOAR_ID"
@@ -421,6 +457,10 @@
           {
             "name": "name",
             "toId": "534dff97102448e59dc93f8318721919"
+          },
+          {
+            "name": "rl",
+            "toId": "7210a0d447531bf6d2907dab3c589da1"
           }
         ],
         "type": "SOAR_ID"
@@ -445,6 +485,10 @@
           {
             "name": "name",
             "toId": "069103d75df74c08871366bdcc34d7a5"
+          },
+          {
+            "name": "rl",
+            "toId": "198e54f0e03a804e5c8b67174b830f9b"
           }
         ],
         "type": "SOAR_ID"
@@ -512,6 +556,19 @@
           {
             "name": "type",
             "toId": "276c3be7a9ad4b96a6ffb37ccfd39a24"
+          },
+          {
+            "name": "reward-link",
+            "toId": "6eb05cf4e8025b4bb2efcab7d7f19f01",
+            "comment": "Kernel-provided RL reward link (auto-created per state)"
+          },
+          {
+            "name": "case",
+            "toId": "c4419acc768df148c94bd5c736362e49"
+          },
+          {
+            "name": "max-cases",
+            "toId": "a171c34c11d349d47eca8a7311165e29"
           }
         ],
         "type": "SOAR_ID"
@@ -589,6 +646,10 @@
           {
             "name": "type",
             "toId": "69e8e2e3409a40bfad2f4b4df3c663bf"
+          },
+          {
+            "name": "phase",
+            "toId": "b869b3a291042421f9ff48a870d8901e"
           }
         ],
         "type": "SOAR_ID"
@@ -632,6 +693,10 @@
           {
             "name": "name",
             "toId": "1dc64756c70f4b729938fb492a0f77f0"
+          },
+          {
+            "name": "rl",
+            "toId": "4a18f91b294ab9ccadbe66ecd0b1b46c"
           }
         ],
         "type": "SOAR_ID"
@@ -687,6 +752,147 @@
           }
         ],
         "type": "SOAR_ID"
+      },
+      {
+        "id": "6eb05cf4e8025b4bb2efcab7d7f19f01",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "reward",
+            "toId": "81fdcadf55e8cc78fb01f2082bc78e5c"
+          }
+        ]
+      },
+      {
+        "id": "c4419acc768df148c94bd5c736362e49",
+        "type": "ENUMERATION",
+        "choices": [
+          "one",
+          "two",
+          "three",
+          "four",
+          "five"
+        ]
+      },
+      {
+        "id": "a171c34c11d349d47eca8a7311165e29",
+        "type": "ENUMERATION",
+        "choices": [
+          "five"
+        ]
+      },
+      {
+        "id": "4a18f91b294ab9ccadbe66ecd0b1b46c",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "81fdcadf55e8cc78fb01f2082bc78e5c",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "value",
+            "toId": "544423e4750902758eecc7eb76bd337f"
+          }
+        ]
+      },
+      {
+        "id": "544423e4750902758eecc7eb76bd337f",
+        "type": "INTEGER"
+      },
+      {
+        "id": "3917335f396a01d2960a776b84d2488a",
+        "type": "ENUMERATION",
+        "choices": [
+          "two",
+          "three",
+          "four"
+        ]
+      },
+      {
+        "id": "18c542ce5ce664acdb76ee31b9143b29",
+        "type": "ENUMERATION",
+        "choices": [
+          "two",
+          "three",
+          "four"
+        ]
+      },
+      {
+        "id": "b869b3a291042421f9ff48a870d8901e",
+        "type": "ENUMERATION",
+        "choices": [
+          "two",
+          "three",
+          "four"
+        ]
+      },
+      {
+        "id": "1f27d791564e6883b7d1336d7a55c7a8",
+        "type": "ENUMERATION",
+        "choices": [
+          "two",
+          "three",
+          "four"
+        ]
+      },
+      {
+        "id": "62aa5295d270ef54ef7c76e0b1c8a180",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "100d775b51ee5108011d11584d8e4fc1",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "f28d00ea129985cbd78e4e2a13e101d0",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "7210a0d447531bf6d2907dab3c589da1",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "5abf1e25f15327070f50be5542fa6808",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "53c7c001792cd89693fdc2b0c1c39a2a",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "198e54f0e03a804e5c8b67174b830f9b",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
+      },
+      {
+        "id": "df034253819dccf6a71cf7272aa444fc",
+        "type": "ENUMERATION",
+        "choices": [
+          "alpha"
+        ]
       }
     ]
   },

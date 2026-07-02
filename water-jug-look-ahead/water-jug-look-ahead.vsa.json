@@ -154,6 +154,11 @@
           {
             "name": "type",
             "toId": "816c408a56604ba4962b096e3c34341b"
+          },
+          {
+            "name": "quiescence",
+            "toId": "e00d725a174715f4342757bb787b2315",
+            "comment": "Kernel-provided quiescence flag on substates (standard Soar 8 selection/evaluation idiom)"
           }
         ],
         "type": "SOAR_ID"
@@ -182,13 +187,17 @@
           {
             "name": "name",
             "toId": "4d88faa7b72946bfb12af4a751468ad9"
+          },
+          {
+            "name": "jug",
+            "toId": "143b9a686324410fbf65084232833d05"
           }
         ],
         "type": "SOAR_ID"
       },
       {
         "id": "8b8a1152f7024ba59cc6791dc8b8a2cd",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -307,6 +316,10 @@
           {
             "name": "two-level-attributes",
             "toId": "2a82c2b6ed8543e68263cf04f3689aa9"
+          },
+          {
+            "name": "default-operator-copy",
+            "toId": "5515b855a2d33acc25ff6527c3f6ec29"
           }
         ],
         "type": "SOAR_ID"
@@ -324,6 +337,20 @@
         ],
         "id": "fc164710835a4f1fa929c0b6166a28fb",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "5515b855a2d33acc25ff6527c3f6ec29",
+        "type": "ENUMERATION",
+        "choices": [
+          "yes"
+        ]
+      },
+      {
+        "id": "e00d725a174715f4342757bb787b2315",
+        "type": "ENUMERATION",
+        "choices": [
+          "t"
+        ]
       }
     ]
   },

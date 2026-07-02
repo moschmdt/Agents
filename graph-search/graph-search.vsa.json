@@ -162,7 +162,7 @@
       },
       {
         "id": "4ff054d454744e25b6cd659c51b9adaf",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -226,13 +226,17 @@
           {
             "name": "waypoints",
             "toId": "a3863654d5cb469391ce6951d6606cca"
+          },
+          {
+            "name": "impasse",
+            "toId": "7ff6ef756395d8bab65259d6d447e3a3"
           }
         ],
         "type": "SOAR_ID"
       },
       {
         "id": "8319437704444edab6cf90509c31925a",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -393,6 +397,13 @@
           }
         ],
         "type": "SOAR_ID"
+      },
+      {
+        "id": "7ff6ef756395d8bab65259d6d447e3a3",
+        "type": "ENUMERATION",
+        "choices": [
+          "tie"
+        ]
       }
     ]
   },

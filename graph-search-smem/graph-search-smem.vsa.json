@@ -62,7 +62,7 @@
       },
       {
         "id": "28491781d13940e0983ff5e2f27ff46c",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -337,6 +337,10 @@
           {
             "name": "name",
             "toId": "cff946d907cf46dd80b553af08a4df29"
+          },
+          {
+            "name": "waypoint",
+            "toId": "2c2cab885cef4793b2012931e7bf2659"
           }
         ],
         "type": "SOAR_ID"
@@ -449,7 +453,7 @@
       },
       {
         "id": "ae3629c5218e4558b0141989c6548e40",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -472,12 +476,12 @@
       },
       {
         "id": "b03d4fdfe724410b8597d119ca606f73",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
         "id": "b0768f1682b54a2aaa84b100098ae4d9",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {

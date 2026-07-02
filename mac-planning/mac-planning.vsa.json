@@ -32,6 +32,34 @@
           {
             "name": "type",
             "toId": "8405b3777d25469d9ca6465e17092fce"
+          },
+          {
+            "name": "right-bank",
+            "toId": "73daa8358eac4863ae6eb452bf593eec"
+          },
+          {
+            "name": "left-bank",
+            "toId": "73daa8358eac4863ae6eb452bf593eec"
+          },
+          {
+            "name": "tried-tied-operator",
+            "toId": "53660eb4bce9a2f40ca4c7985a3f2f38"
+          },
+          {
+            "name": "desired",
+            "toId": "a058799573d04482b5a3677632f51be1"
+          },
+          {
+            "name": "failure",
+            "toId": "a058799573d04482b5a3677632f51be1"
+          },
+          {
+            "name": "boat",
+            "toId": "9299623e5e2dfdaf0c199080e2ec8c7c"
+          },
+          {
+            "name": "o-bank",
+            "toId": "dfa8442cfe4e7985acd2ea7e1061dfd4"
           }
         ],
         "type": "SOAR_ID"
@@ -91,6 +119,10 @@
           {
             "name": "two-level-attributes",
             "toId": "0f0707d100ae4f9b8d1052589f213a80"
+          },
+          {
+            "name": "one-level-attributes",
+            "toId": "ecb25cced51e3e8bbddf236ccf836e3f"
           }
         ],
         "type": "SOAR_ID"
@@ -255,6 +287,23 @@
           {
             "name": "type",
             "toId": "a972d64091264416bf1be26abca988e5"
+          },
+          {
+            "name": "boat",
+            "toId": "87b64b1134c5b7cc563e39dec3c2075f"
+          },
+          {
+            "name": "o-bank",
+            "toId": "9ffeae81cb44260e19f4c4ff6eacade0"
+          },
+          {
+            "name": "tried-tied-operator",
+            "toId": "53660eb4bce9a2f40ca4c7985a3f2f38",
+            "comment": "Tracks the tied operator already tried in a duplicate-detection tie impasse substate (Impasse__Operator_Tie)."
+          },
+          {
+            "name": "superstate",
+            "toId": "87d283308d814b21812e54b51b2c94c4"
           }
         ],
         "type": "SOAR_ID"
@@ -281,6 +330,21 @@
           {
             "name": "type",
             "toId": "e5473cc4db0c403fbb7b8b19d539d7fb"
+          },
+          {
+            "name": "attribute",
+            "toId": "0efc3a2343707d20061b40199ec42ee2",
+            "comment": "Soar-architecture standard impasse-substate attribute."
+          },
+          {
+            "name": "quiescence",
+            "toId": "32c982c5cab6de5c78363b414d969076",
+            "comment": "Soar-architecture standard impasse-substate attribute."
+          },
+          {
+            "name": "impasse",
+            "toId": "d96709af9acccd0e38400f180578f36f",
+            "comment": "Soar-architecture standard impasse-substate attribute."
           }
         ],
         "type": "SOAR_ID"
@@ -374,6 +438,76 @@
         ],
         "id": "f200f8d3ded745d9bcfafc4f0d80f33a",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "87b64b1134c5b7cc563e39dec3c2075f",
+        "type": "ENUMERATION",
+        "choices": [
+          "left-bank",
+          "right-bank"
+        ]
+      },
+      {
+        "id": "9ffeae81cb44260e19f4c4ff6eacade0",
+        "type": "ENUMERATION",
+        "choices": [
+          "left-bank",
+          "right-bank"
+        ]
+      },
+      {
+        "id": "ecb25cced51e3e8bbddf236ccf836e3f",
+        "type": "ENUMERATION",
+        "choices": [
+          "boat",
+          "o-bank"
+        ]
+      },
+      {
+        "id": "53660eb4bce9a2f40ca4c7985a3f2f38",
+        "type": "SOAR_ID",
+        "outEdges": []
+      },
+      {
+        "id": "0efc3a2343707d20061b40199ec42ee2",
+        "type": "ENUMERATION",
+        "choices": [
+          "state",
+          "operator"
+        ]
+      },
+      {
+        "id": "32c982c5cab6de5c78363b414d969076",
+        "type": "ENUMERATION",
+        "choices": [
+          "t"
+        ]
+      },
+      {
+        "id": "d96709af9acccd0e38400f180578f36f",
+        "type": "ENUMERATION",
+        "choices": [
+          "no-change",
+          "tie",
+          "conflict",
+          "constraint-failure"
+        ]
+      },
+      {
+        "id": "9299623e5e2dfdaf0c199080e2ec8c7c",
+        "type": "ENUMERATION",
+        "choices": [
+          "left-bank",
+          "right-bank"
+        ]
+      },
+      {
+        "id": "dfa8442cfe4e7985acd2ea7e1061dfd4",
+        "type": "ENUMERATION",
+        "choices": [
+          "left-bank",
+          "right-bank"
+        ]
       }
     ]
   },

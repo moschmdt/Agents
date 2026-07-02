@@ -97,7 +97,7 @@
       },
       {
         "id": "29aabae15ee64694ab7ee1e9857bfb8e",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -170,7 +170,7 @@
       },
       {
         "id": "3236f7adcf7142288ce09aebae2a9b27",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -481,12 +481,12 @@
       },
       {
         "id": "76f9d8a77316414d87b48b9b55e64746",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
         "id": "774b8a7c959b481ba13946c6152d59a6",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -679,6 +679,14 @@
           {
             "name": "type",
             "toId": "7fc37863d75546f2964c16026aa1aae3"
+          },
+          {
+            "name": "smem",
+            "toId": "1c6503be2a9267a969cd21f1f7f84925"
+          },
+          {
+            "name": "lti",
+            "toId": "c102fcb9a2cfba27696224843b38da82"
           }
         ],
         "type": "SOAR_ID"
@@ -768,7 +776,8 @@
       {
         "choices": [
           "recording",
-          "testing"
+          "testing",
+          "storing"
         ],
         "id": "a95bf3c22ddb4da4a76c0532cf92e9da",
         "type": "ENUMERATION"
@@ -797,6 +806,18 @@
           {
             "name": "type",
             "toId": "f48b8a55d5e1487bbc8b1e17ef9e9a3a"
+          },
+          {
+            "name": "x",
+            "toId": "853d2f55697c8e8f2fe39d7c17a9db96"
+          },
+          {
+            "name": "y",
+            "toId": "ab3dca2705ed78052427fbf21e55c402"
+          },
+          {
+            "name": "result",
+            "toId": "896c5c9fa64fdfe03e7184ac8d17a2c8"
           }
         ],
         "type": "SOAR_ID"
@@ -1182,6 +1203,45 @@
         ],
         "id": "fe7a9edc9bb04563b36608da6b9ca952",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "853d2f55697c8e8f2fe39d7c17a9db96",
+        "type": "INTEGER"
+      },
+      {
+        "id": "ab3dca2705ed78052427fbf21e55c402",
+        "type": "INTEGER"
+      },
+      {
+        "id": "896c5c9fa64fdfe03e7184ac8d17a2c8",
+        "type": "INTEGER"
+      },
+      {
+        "id": "1c6503be2a9267a969cd21f1f7f84925",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "command",
+            "toId": "36600e41cbee8f7d1021224354076d02"
+          }
+        ]
+      },
+      {
+        "id": "36600e41cbee8f7d1021224354076d02",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "store",
+            "toId": "ca8c7fada1e147cb9a3bbbbe21972ecd"
+          }
+        ]
+      },
+      {
+        "id": "c102fcb9a2cfba27696224843b38da82",
+        "type": "ENUMERATION",
+        "choices": [
+          "t"
+        ]
       }
     ]
   },

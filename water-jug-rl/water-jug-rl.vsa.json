@@ -129,6 +129,11 @@
           {
             "name": "type",
             "toId": "46e97fb9af8a449a982a6b5be707b1e6"
+          },
+          {
+            "name": "reward-link",
+            "toId": "6210b7c73560bc8e6275911305434a0c",
+            "comment": "Kernel-provided RL reward link (auto-created per state)"
           }
         ],
         "type": "SOAR_ID"
@@ -213,6 +218,41 @@
         ],
         "id": "f8759eebc3bf409493e89a486aa44e6a",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "6210b7c73560bc8e6275911305434a0c",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "reward",
+            "toId": "f65164a7d6204197c9d32236478362bc"
+          },
+          {
+            "name": "final-update",
+            "toId": "8d308c5061289fa11d92e099682ddbf3"
+          }
+        ]
+      },
+      {
+        "id": "f65164a7d6204197c9d32236478362bc",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "value",
+            "toId": "678ecd86a5ba210c8727fbe2f660cdc6"
+          }
+        ]
+      },
+      {
+        "id": "8d308c5061289fa11d92e099682ddbf3",
+        "type": "ENUMERATION",
+        "choices": [
+          "true"
+        ]
+      },
+      {
+        "id": "678ecd86a5ba210c8727fbe2f660cdc6",
+        "type": "INTEGER"
       }
     ]
   },

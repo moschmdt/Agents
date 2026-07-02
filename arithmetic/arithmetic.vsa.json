@@ -243,6 +243,10 @@
           {
             "name": "type",
             "toId": "2c88fed6684f48fcb0792cc600cc482a"
+          },
+          {
+            "name": "one-fact",
+            "toId": "0371011364cde687109f7597e1a3631f"
           }
         ],
         "type": "SOAR_ID"
@@ -295,6 +299,10 @@
           {
             "name": "operation-symbol",
             "toId": "811814c9e9354afeb1525c47f53f7be9"
+          },
+          {
+            "name": "carry-borrow",
+            "toId": "6068ca3c1f43bd52d5cb371c95010152"
           }
         ],
         "type": "SOAR_ID"
@@ -311,7 +319,7 @@
       },
       {
         "choices": [
-          "carry-borrow"
+          "carry"
         ],
         "id": "3a8eb7ef0ba14939ae780b047d73b973",
         "type": "ENUMERATION"
@@ -421,7 +429,9 @@
       },
       {
         "choices": [
-          "compute-result"
+          "compute-result",
+          "compute-subtraction-no-borrow-result",
+          "compute-subtraction-borrow-result"
         ],
         "id": "664f8c8fffa548a3b66d0ce75d08a140",
         "type": "ENUMERATION"
@@ -456,7 +466,8 @@
       },
       {
         "choices": [
-          "compute-subtraction-result"
+          "compute-subtraction-borrow-result",
+          "compute-subtraction-no-borrow-result"
         ],
         "id": "6e9e59a3fa04461ab7764d3b7bc2f7a7",
         "type": "ENUMERATION"
@@ -569,6 +580,10 @@
           {
             "name": "sum",
             "toId": "0b093efd63924507940c29090143976a"
+          },
+          {
+            "name": "carry",
+            "toId": "6276140492fd92fc8ef41fec99c7fac2"
           }
         ],
         "type": "SOAR_ID"
@@ -742,7 +757,7 @@
       },
       {
         "id": "af027581a4724453a38189a7a68b8849",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -796,6 +811,11 @@
           {
             "name": "result",
             "toId": "e4b10cee43ff4d10a0f635d3462f9e24"
+          },
+          {
+            "name": "carry",
+            "toId": "f3b5f93f744ee80dbe93d3940abaf5db",
+            "comment": "1 while a carry is pending, or 'unknown' before propagation"
           }
         ],
         "type": "SOAR_ID"
@@ -813,7 +833,7 @@
       },
       {
         "id": "bbd8c0da3acf41e5994d5f96890a8830",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -853,7 +873,7 @@
       },
       {
         "choices": [
-          "compute-result"
+          "compute-subtraction-borrow-result"
         ],
         "id": "ca428c3aab6748cd94a2659dec3b1e16",
         "type": "ENUMERATION"
@@ -940,7 +960,8 @@
       },
       {
         "choices": [
-          "compute-result"
+          "compute-result",
+          "compute-addition-result"
         ],
         "id": "d94d3b72fc314dbd9252f42eecb27ddd",
         "type": "ENUMERATION"
@@ -1165,12 +1186,41 @@
           {
             "name": "type",
             "toId": "2ad3f24b73b74e7898ab1ce3d4aec40c"
+          },
+          {
+            "name": "carry",
+            "toId": "85aa5f320bfbde7940a62058f96d469b",
+            "comment": "1 while a carry is pending, or 'unknown' before propagation"
           }
         ],
         "type": "SOAR_ID"
       },
       {
         "id": "fbd1fb3a303c4f05abc26d7c11a63111",
+        "type": "INTEGER"
+      },
+      {
+        "id": "85aa5f320bfbde7940a62058f96d469b",
+        "type": "STRING"
+      },
+      {
+        "id": "f3b5f93f744ee80dbe93d3940abaf5db",
+        "type": "STRING"
+      },
+      {
+        "id": "6068ca3c1f43bd52d5cb371c95010152",
+        "type": "ENUMERATION",
+        "choices": [
+          "carry",
+          "borrow"
+        ]
+      },
+      {
+        "id": "0371011364cde687109f7597e1a3631f",
+        "type": "INTEGER"
+      },
+      {
+        "id": "6276140492fd92fc8ef41fec99c7fac2",
         "type": "INTEGER"
       }
     ]

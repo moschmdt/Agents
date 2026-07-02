@@ -142,6 +142,31 @@
           {
             "name": "type",
             "toId": "a4addb9370294ad4a1f824dfa9b29c40"
+          },
+          {
+            "name": "impasse",
+            "toId": "461357552635f51f3015f8f04cb79340",
+            "comment": "Standard Soar substate impasse type"
+          },
+          {
+            "name": "attribute",
+            "toId": "f9ef00a5e61c97279c436407a350c5ef",
+            "comment": "Standard Soar substate ^attribute (what's being decided)"
+          },
+          {
+            "name": "quiescence",
+            "toId": "3b27e9e81eb6b83d06ab1ac84a285fe8",
+            "comment": "Standard Soar substate ^quiescence marker"
+          },
+          {
+            "name": "evaluation",
+            "toId": "7aa4691118a0d45f2710c37b04345f23",
+            "comment": "Evaluation result structure created during lookahead operator evaluation (default selection library)"
+          },
+          {
+            "name": "operator",
+            "toId": "82a007fdf1ef3b43df852a275c6905dd",
+            "comment": "evaluate-operator: standard lookahead-evaluation operator from default selection library"
           }
         ],
         "type": "SOAR_ID"
@@ -383,6 +408,71 @@
           }
         ],
         "type": "SOAR_ID"
+      },
+      {
+        "id": "461357552635f51f3015f8f04cb79340",
+        "type": "ENUMERATION",
+        "choices": [
+          "none",
+          "tie",
+          "constraint-failure",
+          "conflict",
+          "no-change"
+        ]
+      },
+      {
+        "id": "f9ef00a5e61c97279c436407a350c5ef",
+        "type": "ENUMERATION",
+        "choices": [
+          "state",
+          "operator"
+        ]
+      },
+      {
+        "id": "3b27e9e81eb6b83d06ab1ac84a285fe8",
+        "type": "ENUMERATION",
+        "choices": [
+          "t"
+        ]
+      },
+      {
+        "id": "7aa4691118a0d45f2710c37b04345f23",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "symbolic-value",
+            "toId": "eb6498072ac8089a975225f6c53142c6",
+            "comment": "Evaluation outcome symbol"
+          }
+        ]
+      },
+      {
+        "id": "eb6498072ac8089a975225f6c53142c6",
+        "type": "ENUMERATION",
+        "choices": [
+          "partial-failure"
+        ]
+      },
+      {
+        "id": "82a007fdf1ef3b43df852a275c6905dd",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "name",
+            "toId": "d918ed592ca5750eda12ea7647dd221c"
+          },
+          {
+            "name": "evaluation",
+            "toId": "7aa4691118a0d45f2710c37b04345f23"
+          }
+        ]
+      },
+      {
+        "id": "d918ed592ca5750eda12ea7647dd221c",
+        "type": "ENUMERATION",
+        "choices": [
+          "evaluate-operator"
+        ]
       }
     ]
   },

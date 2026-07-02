@@ -153,7 +153,8 @@
       },
       {
         "choices": [
-          "state"
+          "state",
+          "operator-subgoal"
         ],
         "id": "8e3006821b6a4f2eb0c21d2fc4052111",
         "type": "ENUMERATION"
@@ -278,10 +279,6 @@
           {
             "name": "type",
             "toId": "f20338a0372d4d02beb0ab4286a7696d"
-          },
-          {
-            "name": "type",
-            "toId": "fa91cbf0a56e42f7afc008a492e97ec7"
           }
         ],
         "type": "SOAR_ID"
@@ -312,13 +309,6 @@
           "operator-subgoal"
         ],
         "id": "f20338a0372d4d02beb0ab4286a7696d",
-        "type": "ENUMERATION"
-      },
-      {
-        "choices": [
-          "state"
-        ],
-        "id": "fa91cbf0a56e42f7afc008a492e97ec7",
         "type": "ENUMERATION"
       }
     ]

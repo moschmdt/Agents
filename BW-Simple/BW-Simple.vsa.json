@@ -187,6 +187,10 @@
           {
             "name": "type",
             "toId": "bf13bdaab4df46c99fbcef31fc255556"
+          },
+          {
+            "name": "print-move",
+            "toId": "e6b9b4fb96d29893371ddc4b555b0fbc"
           }
         ],
         "type": "SOAR_ID"
@@ -214,6 +218,13 @@
           }
         ],
         "type": "SOAR_ID"
+      },
+      {
+        "id": "e6b9b4fb96d29893371ddc4b555b0fbc",
+        "type": "ENUMERATION",
+        "choices": [
+          "true"
+        ]
       }
     ]
   },

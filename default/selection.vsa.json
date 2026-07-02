@@ -90,7 +90,7 @@
       },
       {
         "id": "1f588123e254458d975261c0abf0c78e",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -144,7 +144,7 @@
       },
       {
         "id": "2adce816367c4e918cd54d041ed8ef1d",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -335,6 +335,14 @@
           {
             "name": "verbose",
             "toId": "0b134b208f1442d494e50e2e12ee3ade"
+          },
+          {
+            "name": "operator",
+            "toId": "7248547f9a9407c36573e99e3b77a59c"
+          },
+          {
+            "name": "evaluation",
+            "toId": "58cc9a96a596421abfc8aca255b72416"
           }
         ],
         "type": "SOAR_ID"
@@ -468,7 +476,7 @@
       },
       {
         "id": "51296ec7c6194d7390ab1767ce758510",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -534,7 +542,7 @@
       },
       {
         "id": "56e6a8dc9be3426cbe5e8e446f866d88",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -592,7 +600,7 @@
       },
       {
         "id": "5ff18bb7f99c4c898165b52d43be05bd",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -633,7 +641,7 @@
       },
       {
         "id": "6e0c504503c341e9ac3e4face863c239",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -656,7 +664,7 @@
       },
       {
         "id": "7fd1117c324c450e90e7072790f1e971",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -806,7 +814,7 @@
       },
       {
         "id": "9964d9199eb3441da60270c4fa9c696a",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -863,7 +871,7 @@
       },
       {
         "id": "bed7da473f3c4c058a84bbaf307d113c",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -906,7 +914,7 @@
       },
       {
         "id": "cadb6994eb46445fa192e1053a86dc82",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -1068,6 +1076,39 @@
         ],
         "id": "fe8c3bd917874273b8b0c872ec94543c",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "34e4273b3f7d3c098002f2ca50691e9f",
+        "type": "ENUMERATION",
+        "choices": [
+          "evaluate-operator"
+        ]
+      },
+      {
+        "id": "7248547f9a9407c36573e99e3b77a59c",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "name",
+            "toId": "34e4273b3f7d3c098002f2ca50691e9f"
+          },
+          {
+            "name": "superoperator",
+            "toId": "7fd1117c324c450e90e7072790f1e971"
+          },
+          {
+            "name": "evaluation",
+            "toId": "58cc9a96a596421abfc8aca255b72416"
+          },
+          {
+            "name": "superproblem-space",
+            "toId": "5ff18bb7f99c4c898165b52d43be05bd"
+          },
+          {
+            "name": "superstate",
+            "toId": "80b11488095a47aab4ae46784375334b"
+          }
+        ]
       }
     ]
   },

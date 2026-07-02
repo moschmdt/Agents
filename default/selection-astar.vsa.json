@@ -8,12 +8,12 @@
       },
       {
         "id": "04f981690c854596a4b88dc6738cee38",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
         "id": "0e5d0dae3d7b45a4b08a1394413b23df",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -22,7 +22,7 @@
       },
       {
         "id": "11284c82acfc4e0c91f7121f0c8c6075",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -79,6 +79,14 @@
           {
             "name": "visited",
             "toId": "3d9b0dbc054b4cdaa33de8ead3a3174f"
+          },
+          {
+            "name": "exhaustion-failure",
+            "toId": "3d9b0dbc054b4cdaa33de8ead3a3174f"
+          },
+          {
+            "name": "updated-estimate",
+            "toId": "d9afcb1bdca5382c502ace686cea5977"
           }
         ],
         "type": "SOAR_ID"
@@ -142,7 +150,8 @@
       {
         "choices": [
           "failure",
-          "lose"
+          "lose",
+          "indifferent"
         ],
         "id": "3e4a67f097234916a9bb9ff9abda3c9d",
         "type": "ENUMERATION"
@@ -207,7 +216,12 @@
       },
       {
         "id": "48097f98e7f1404193a3f578e00e7403",
-        "outEdges": [ ],
+        "outEdges": [
+          {
+            "name": "next-waypoint",
+            "toId": "3d9b0dbc054b4cdaa33de8ead3a3174f"
+          }
+        ],
         "type": "SOAR_ID"
       },
       {
@@ -216,6 +230,10 @@
           {
             "name": "name",
             "toId": "ac2ebc0e2c6446549d68421a3fdb2bc0"
+          },
+          {
+            "name": "evaluation",
+            "toId": "2d70736922154efeabf0baa967f9e351"
           }
         ],
         "type": "SOAR_ID"
@@ -274,6 +292,10 @@
           {
             "name": "type",
             "toId": "c304ce3f51bb4f349efa5cc5a60a06c2"
+          },
+          {
+            "name": "exhaustion-failure",
+            "toId": "3d9b0dbc054b4cdaa33de8ead3a3174f"
           }
         ],
         "type": "SOAR_ID"
@@ -362,7 +384,7 @@
       },
       {
         "id": "704b8a81e0d743208557a3441ec30109",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -371,6 +393,10 @@
           {
             "name": "name",
             "toId": "f2141a9d195542f3b349eef86b586389"
+          },
+          {
+            "name": "evaluation",
+            "toId": "2d70736922154efeabf0baa967f9e351"
           }
         ],
         "type": "SOAR_ID"
@@ -424,7 +450,7 @@
       },
       {
         "id": "8bd7db121610448ea17e99597436e228",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -449,6 +475,14 @@
           {
             "name": "visited",
             "toId": "3d9b0dbc054b4cdaa33de8ead3a3174f"
+          },
+          {
+            "name": "superstate",
+            "toId": "c683e78e773d444088b3765dc7c0a058"
+          },
+          {
+            "name": "superproblem-space",
+            "toId": "7f155a75fce602a6e6346d67cfb3677e"
           }
         ],
         "type": "SOAR_ID"
@@ -462,7 +496,7 @@
       },
       {
         "id": "9c945ca9bc0c408ea3c6e19101d92336",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -478,7 +512,7 @@
       },
       {
         "id": "a91b996c87f94c8d87a4b6a5d74d7a41",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -618,6 +652,10 @@
           {
             "name": "type",
             "toId": "6a93fcb42cfc4ef4a2dd8cf49b203cab"
+          },
+          {
+            "name": "name",
+            "toId": "90e23e9fc114b74b2bd08f4919479661"
           }
         ],
         "type": "SOAR_ID"
@@ -663,7 +701,7 @@
       },
       {
         "id": "e1dd556f849c442ca4a3bd269795f3f9",
-        "outEdges": [ ],
+        "outEdges": [],
         "type": "SOAR_ID"
       },
       {
@@ -686,6 +724,34 @@
         ],
         "id": "f90e2e33e1fa4ff7bea7e5654aa60534",
         "type": "ENUMERATION"
+      },
+      {
+        "id": "90e23e9fc114b74b2bd08f4919479661",
+        "type": "ENUMERATION",
+        "choices": [
+          "go-to-location"
+        ]
+      },
+      {
+        "id": "7f155a75fce602a6e6346d67cfb3677e",
+        "type": "SOAR_ID",
+        "outEdges": [
+          {
+            "name": "name",
+            "toId": "898ac463b699ab9d3d4b34ae2d800b8d"
+          }
+        ]
+      },
+      {
+        "id": "898ac463b699ab9d3d4b34ae2d800b8d",
+        "type": "STRING"
+      },
+      {
+        "id": "d9afcb1bdca5382c502ace686cea5977",
+        "type": "ENUMERATION",
+        "choices": [
+          "true"
+        ]
       }
     ]
   },
